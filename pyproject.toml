@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyethnobiology"
-version = "0.1.0"
+version = "0.1.1"
 description = "Ethnobiological data assessment tool."
 authors = ["Ogün Demir <ogundemir8@gmail.com>"]
 license = "MIT"

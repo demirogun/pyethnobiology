@@ -2,10 +2,10 @@ from setuptools import setup
 
 setup(
     name='pyethnobiology',
-    version='0.1.0',
+    version='0.1.1',
     packages=["pyethnobiology"],
-    url='https://github.com/demirogun/pyEthnobiology',
-    license='',
+    url='https://github.com/demirogun/pyethnobiology',
+    license='MIT',
     author='Ogün Demir',
     author_email='ogundemir8@gmail.com',
     description='Ethnobiological data assessment tool.',
