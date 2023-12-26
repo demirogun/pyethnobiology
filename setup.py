@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pyethnobiology',
-    version='1.0',
+    version='0.1.0',
     packages=["pyethnobiology"],
     url='https://github.com/demirogun/pyEthnobiology',
     license='',
@@ -15,9 +15,11 @@ setup(
         'cycler==0.12.1',
         'fonttools==4.47.0',
         'importlib-resources==6.1.1',
+        'joblib==1.3.2',
         'kiwisolver==1.4.5',
         'matplotlib==3.8.2',
         'numpy==1.26.2',
+        'openpyxl==3.1.2',
         'packaging==23.2',
         'pandas==2.1.4',
         'Pillow==10.1.0',
@@ -26,11 +28,22 @@ setup(
         'python-dateutil==2.8.2',
         'pytz==2023.3.post1',
         'rdata==0.10.0',
+        'scikit-learn==1.3.2',
+        'scipy==1.11.4',
         'seaborn==0.13.0',
         'six==1.16.0',
+        'threadpoolctl==3.2.0',
         'tzdata==2023.3',
         'xarray==2023.12.0',
-        'zipp==3.17.0'
+        'zipp==3.17.0',
+    ],
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3',
+        'Topic :: Software Development :: Libraries :: Python Modules',
     ],
 
 )

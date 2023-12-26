@@ -109,7 +109,7 @@ literature_column = "literature"
 
 ### Create an instance of the class
 ```python
-pye = pyethnobiology(data, informant_column, taxon_column, convert_use_data=convert_use_data)
+pye = pyethnobiology(data, informant_column, taxon_column, convert_use_data)
 ```
 
 You can also define the use column and literature column in the class instance. For example:
@@ -322,7 +322,7 @@ You can plot all indices in a radial plot **except Fidelity Level (FL)**. For ex
 #Use Report (UR) per species
 pye.UR().plot_radial()
 ```
-<img src="test/data/visualization/UR.png" style="width:300px;">
+<img src="tests/data/visualization/UR.png" style="width:300px;">
 
 #### Customization of the radial plot
 
@@ -353,7 +353,7 @@ You can change the colors of the radial plot. It takes the range of two colors. 
 pye.UR().plot_radial(colors=["#ECF4D6", "#265073"]) # [minimum value color, maximum value color]
 ```
 
-<img src="test/data/visualization/UR_colors.png" style="width:300px;">
+<img src="tests/data/visualization/UR_colors.png" style="width:300px;">
 
 You can also use multiple configurations. For example:
 
@@ -368,7 +368,7 @@ pye.UR().plot_radial(filename="UR_conf.png",
                      )
 ```
 
-<img src="test/data/visualization/UR_conf.png" style="width:300px;">
+<img src="tests/data/visualization/UR_conf.png" style="width:300px;">
 
 
 ### Heatmap
@@ -380,7 +380,7 @@ You can only plot the Fidelity Level (FL) index in a heatmap. For example:
 pye.FL().plot_heatmap()
 ```
 
-<img src="test/data/visualization/FL.png" style="width:600px;">
+<img src="tests/data/visualization/FL.png" style="width:600px;">
 
 #### Customization of the heatmap
 
@@ -408,7 +408,7 @@ Supported cmaps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
 pye.FL().plot_heatmap(filename="FL_reds.png",cmap="Reds")
 ```
 
-<img src="test/data/visualization/FL_reds.png" style="width:600px;">
+<img src="tests/data/visualization/FL_reds.png" style="width:600px;">
 
 ### Chord plot
 
@@ -418,7 +418,7 @@ You can plot all data with the Chord plot. It is diagram of ethnobiological uses
 pye.plot_chord()
 ```
 
-<img src="test/data/visualization/chord_plot.png" style="width:500px;">
+<img src="tests/data/visualization/chord_plot.png" style="width:500px;">
 
 #### Customization of the Chord plot
 
@@ -442,7 +442,7 @@ Supported cmaps: https://matplotlib.org/stable/tutorials/colors/colormaps.html
 pye.plot_chord(colors="Dark2")
 ```
 
-<img src="test/data/visualization/chord_plot_Dark2.png" style="width:500px;">
+<img src="tests/data/visualization/chord_plot_Dark2.png" style="width:500px;">
 
 You can also use multiple configurations. For example:
 
@@ -456,4 +456,4 @@ pye.plot_chord(filename="chord_plot_conf.png",
                )
 ```
 
-<img src="test/data/visualization/chord_plot_conf.png" style="width:500px;">
+<img src="tests/data/visualization/chord_plot_conf.png" style="width:500px;">
