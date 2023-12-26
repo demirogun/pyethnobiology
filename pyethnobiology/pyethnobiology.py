@@ -89,14 +89,14 @@ class pyethnobiology:
         
         merged_df = dfs_to_merge[0]
         for df in dfs_to_merge[1:]:
-            merged_df = merged_df.merge(df, on='taxon', how='outer')
+            merged_df = merged_df.merge(df, on=self.taxon_column, how='outer')
         
         if sort_values_by:
             return merged_df.sort_values(by=sort_values_by, ascending=ascending)
         else:
             return merged_df
   
-    def plot_chord(self, filename="chord_plot.png", dpi=300, by="informant", colors=None, min_info_count=0, get_first=False):
+    def plot_chord(self, filename="chord_plot.png", dpi=300, by="taxon", colors=None, min_info_count=0, get_first=None):
         chord_plot = ChordPlot(self.data, by, self.informant_column, self.taxon_column, self.use_column, colors, min_info_count, get_first)
         chord_plot.save_plot(filename=filename, dpi=dpi)
         chord_plot.plot()

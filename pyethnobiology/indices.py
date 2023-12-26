@@ -31,7 +31,7 @@ class FC:
 
         # Calculate FC per species by counting unique informants for each taxon
         fc_df = (
-            self.data.groupby(self.taxon_column)[self.informant_column]
+            self.data.groupby(self.taxon_column, observed=True)[self.informant_column]
             .nunique()
             .reset_index(name="FC")
         )
@@ -82,7 +82,7 @@ class NU:
         """
 
         nu_df = (
-            self.data.groupby(self.taxon_column)[self.use_column]
+            self.data.groupby(self.taxon_column, observed=True)[self.use_column]
             .nunique()
             .reset_index(name="NU")
         )
@@ -473,7 +473,7 @@ class RFC:
         # Calculate use reports (UR) for each species
         ur_df = (
             self.data[[self.taxon_column, self.informant_column]]
-            .groupby(self.taxon_column)
+            .groupby(self.taxon_column, observed=True)
             .size()
             .reset_index(name="UR")
         )
@@ -590,24 +590,9 @@ class UV:
         Returns:
             pd.DataFrame: DataFrame containing taxon and UV columns.
         """
-
-        # Get UR for each species grouped by informants
-        ur_by_informant = (
-            self.data.groupby([self.informant_column, self.taxon_column], observed=True)
-            .size()
-            .to_frame(name="UR")
-            .reset_index()
-        )
-
-        # Calculate UV (number of informants mentioning each use)
-        uv_df = (
-            ur_by_informant.groupby(self.taxon_column, observed=True)
-            .size()
-            .reset_index(name="UV")
-            .sort_values(by="UV", ascending=False)
-            .reset_index(drop=True)
-        )
-        return uv_df
+        UV_df = CI(self.data, self.informant_column, self.taxon_column, self.use_column).calculate()
+        UV_df = UV_df.rename(columns={"CI": "UV"})
+        return UV_df
 
     def save_data(self):
         UV_df = self.calculate()

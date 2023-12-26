@@ -149,9 +149,12 @@ class Jaccard:
 
                 jaccard_similarities.append({"study": other_study, "similarity": jaccard_sim})
 
+        jaccard_similarities = sorted(jaccard_similarities, key=lambda x: x['similarity'], reverse=True)
+
         return pd.DataFrame(jaccard_similarities)
 
     def run_analysis(self, literature_column: str, taxon_column: str, use_column: str, my_study: str = "My Study"):
+        self.data = self.data.dropna(subset=[literature_column])
         self.data = self.convert_data(literature_column, taxon_column, use_column)
         self.data['study'] = self.data.index.get_level_values("study")
         self.data['taxon'] = self.data.index.get_level_values(taxon_column)

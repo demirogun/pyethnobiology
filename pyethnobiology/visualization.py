@@ -14,7 +14,7 @@ class ChordPlot:
 
             self,
             data: pd.DataFrame,
-            by: str = "informant",
+            by: str = "taxon",
             informant_column: str = "informant",
             taxon_column: str = "taxon",
             use_column: str = "ailments_treated",
@@ -62,17 +62,13 @@ class ChordPlot:
                 Exception: If any error occurs during plot generation.
         """
 
-        try:
-            # Prepare data for visualization
-            matrix, order = self._prepare_data()
+        # Prepare data for visualization
+        matrix, order = self._prepare_data()
 
-            # Create the Circos plot
-            circos = self._create_plot(matrix, order)
+        # Create the Circos plot
+        circos = self._create_plot(matrix, order)
 
-            return circos.plotfig()
-        except Exception as e:
-            print(f"Error creating ChordPlot: {e}")
-            return None
+        return circos.plotfig()
 
     def save_plot(self, filename: str, dpi: int = 300):
 
@@ -87,17 +83,15 @@ class ChordPlot:
                     Exception: If any error occurs during plot generation.
             """
 
-            try:
-                # Prepare data for visualization
-                matrix, order = self._prepare_data()
+            # Prepare data for visualization
+            matrix, order = self._prepare_data()
 
-                # Create the Circos plot
-                circos = self._create_plot(matrix, order)
+            # Create the Circos plot
+            circos = self._create_plot(matrix, order)
 
-                # Save the plot to a file
-                circos.savefig(filename, dpi=dpi)
-            except Exception as e:
-                print(f"Error creating ChordPlot: {e}")
+            # Save the plot to a file
+            circos.savefig(filename, dpi=dpi)
+
 
     def _prepare_data(self) -> pd.DataFrame:
 
@@ -159,7 +153,7 @@ class ChordPlot:
             r_lim=(97, 100),
             cmap=self.colors if self.colors else "tab10",
             label_kws=dict(size=9, orientation="vertical"),
-            link_kws=dict(ec="black", lw=0.5),
+            link_kws=dict(ec="black", lw=0.1),
             order=order,
         )
         return circos
