@@ -457,3 +457,15 @@ pye.plot_chord(filename="chord_plot_conf.png",
 ```
 
 <img src="https://github.com/demirogun/pyethnobiology/blob/main/tests/data/visualization/chord_plot_conf.png" style="width:500px;">
+
+## References
+
+Albuquerque, Ulysses Paulino, Patricia Muniz de Medeiros, Washington Soares Ferreira Junior, Taline Cristina da Silva, Rafael Ricardo Vasconcelos da Silva, and Thiago Goncalves-Souza. 2019. Social-Ecological Theory of Maximization: Basic Concepts and Two Initial Models. Biological Theory. [doi.org/10.1007/s13752-019-00316-8.](doi.org/10.1007/s13752-019-00316-8)
+
+Heinrich, M., Ankli, A., Frei, B., Weimann, C., & Sticher, O. (1998). Medicinal plants in Mexico: Healers consensus and cultural importance. Social science & medicine, 47(11), 1859-1871.
+
+Tardio, J., and M. Pardo-de-Santayana, (2008). Cultural Importance Indices: A Comparative Analysis Based on the Useful Wild Plants of Southern Cantabria (Northern Spain) 1. Economic Botany, 62(1), 24-39. [doi.org/10.1007/s12231-007-9004-5.](doi.org/10.1007/s12231-007-9004-5)
+
+Whitney, C. W., Bahati, J., and Gebauer, J. (2018). Ethnobotany and agrobiodiversity; valuation of plants in the homegardens of southwestern Uganda. Ethnobiology Letters, 9(2), 90-100. [doi.org/10.14237/ebl.9.2.2018.503.](doi.org/10.14237/ebl.9.2.2018.503)
+
+Whitney C. W. (2022). ethnobotanyR: Calculate Quantitative Ethnobotany Indices. R package version 0.1.9, [https://CRAN.R-project.org/package=ethnobotanyR.](https://CRAN.R-project.org/package=ethnobotanyR).
