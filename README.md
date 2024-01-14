@@ -1,5 +1,7 @@
+[![PyPI Latest Release](https://img.shields.io/pypi/v/pyethnobiology.svg)](https://pypi.org/project/pyethnobiology/) [![PyPI Downloads](https://img.shields.io/pypi/dm/pyethnobiology.svg?label=PyPI%20downloads)](https://pypi.org/project/pyethnobiology/) [![PyPI Downloads](https://img.shields.io/pypi/dw/pyethnobiology.svg?label=PyPI%20downloads)](https://pypi.org/project/pyethnobiology/) [![DOI](https://zenodo.org/badge/735446865.svg)](https://zenodo.org/doi/10.5281/zenodo.10509612) [![License - MIT](https://img.shields.io/pypi/l/pyethnobiology.svg)](https://github.com/demirogun/pyethnobiology/blob/main/LICENSE)
+
 # pyethnobiology
- Ethnobiological data assessment tool
+Ethnobiological data assessment tool
 
 ## Introduction
 
