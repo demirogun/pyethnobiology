@@ -5,7 +5,9 @@
 
 This tool is designed to help researchers analyze their ethnobiological data. It is based on the [ethnobotanyR](https://github.com/CWWhitney/ethnobotanyR) package with some modifications. Also, for further information on the methods used in this tool, please refer to the ethnobotanyR package.
 
-Scientific explanations of the indices used in this tool can be found in the [documentation of the ethnobotanyR package](http://htmlpreview.github.io/?https://github.com/CWWhitney/ethnobotanyR/blob/master/vignettes/ethnobotanyr_vignette.html). 
+Scientific explanations of the indices used in this tool can be found in the [documentation of the ethnobotanyR package](http://htmlpreview.github.io/?https://github.com/CWWhitney/ethnobotanyR/blob/master/vignettes/ethnobotanyr_vignette.html).
+
+Please check also [citiation](#citiation-of-packages) part if you use this package or [ethnobotanyR](https://github.com/CWWhitney/ethnobotanyR).
 
 ## Installation
 
@@ -469,3 +471,41 @@ Tardio, J., and M. Pardo-de-Santayana, (2008). Cultural Importance Indices: A Co
 Whitney, C. W., Bahati, J., and Gebauer, J. (2018). Ethnobotany and agrobiodiversity; valuation of plants in the homegardens of southwestern Uganda. Ethnobiology Letters, 9(2), 90-100. [doi.org/10.14237/ebl.9.2.2018.503.](doi.org/10.14237/ebl.9.2.2018.503)
 
 Whitney C. W. (2022). ethnobotanyR: Calculate Quantitative Ethnobotany Indices. R package version 0.1.9, [https://CRAN.R-project.org/package=ethnobotanyR.](https://CRAN.R-project.org/package=ethnobotanyR).
+
+## Citiation of packages
+### For Python package
+APA
+```
+Demir, O., & Whitney, C. (2023). pyethnobiology: Ethnobiological data assessment tool (Version 0.1.1) [Software]. https://github.com/demirogun/pyethnobiology
+```
+BibTeX
+```
+@software{pyethnobiology,
+  author = {Ogün Demir and Cory Whitney},
+  title = {{pyethnobiology}},
+  version = {0.1.1},
+  url = {https://github.com/demirogun/pyethnobiology},
+  year = {2023}
+}
+```
+
+### For R package
+```R
+citation("ethnobotanyR")
+#> 
+#> To cite package 'ethnobotanyR' in publications use:
+#> 
+#>   Whitney C (2022). _ethnobotanyR: Calculate Quantitative Ethnobotany
+#>   Indices_. R package version 0.1.9,
+#>   <https://CRAN.R-project.org/package=ethnobotanyR>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {ethnobotanyR: Calculate Quantitative Ethnobotany Indices},
+#>     author = {Cory Whitney},
+#>     year = {2022},
+#>     note = {R package version 0.1.9},
+#>     url = {https://CRAN.R-project.org/package=ethnobotanyR},
+#>   }
+```
